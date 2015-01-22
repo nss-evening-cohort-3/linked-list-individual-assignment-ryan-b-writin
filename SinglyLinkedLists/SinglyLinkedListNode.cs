@@ -57,6 +57,22 @@ namespace SinglyLinkedLists
             throw new NotImplementedException();
         }
 
+        public override bool Equals(object obj)
+        {
+            SinglyLinkedListNode other = obj as SinglyLinkedListNode;
+            //if (other != null)
+            //{
+            //    return this.Value.Equals(other.Value);
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            // Simplifies down to:
+
+            return other != null && this.Value.Equals(other.Value);
+        }
+
         public bool IsLast()
         {
             return next == null;
