@@ -45,11 +45,7 @@ namespace SinglyLinkedLists
             }
             else
             {
-                SinglyLinkedListNode currentNode = firstNode;
-                while(!currentNode.IsLast()){
-                    currentNode = currentNode.Next;
-                }
-                currentNode.Next = new SinglyLinkedListNode(value);
+                LastNode().Next = new SinglyLinkedListNode(value);
             }
         }
 
@@ -117,7 +113,22 @@ namespace SinglyLinkedLists
         // HINT 3: If you highlight code and right click, you can use the refactor menu to extract a method for you...
         public string Last()
         {
-            throw new NotImplementedException();
+            var lastNode = LastNode();
+            return (lastNode == null) ? null : lastNode.Value;
+        }
+
+        private SinglyLinkedListNode LastNode()
+        {
+            if (firstNode == null)
+            {
+                return null;
+            }
+            SinglyLinkedListNode lastNode = firstNode;
+            while (!lastNode.IsLast())
+            {
+                lastNode = lastNode.Next;
+            }
+            return lastNode;
         }
 
         public void Remove(string value)
