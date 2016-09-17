@@ -1,6 +1,6 @@
-# CSharpSinglyLinkedLists
+# CSharp LinkedLists
 
-Cohort Grape (7) Linked List Project.
+Linked List Project.
 
 This is the C# equivalent of https://github.com/elizabrock/linked_list_cohort_blueberry
 
